@@ -27,6 +27,7 @@ public aspect Logger {
     	catch(Exception e){
     		System.out.println("Error al producir la transacción");
     	}
+    	System.out.println("Transacción realizada - "+"Hora: "+cal.get(Calendar.HOUR_OF_DAY)+":"+cal.get(Calendar.MINUTE)+"\n");
     }
     
     after(): money(){
@@ -38,6 +39,7 @@ public aspect Logger {
         	catch(Exception e){
         		System.out.println("Error al retirar dinero");
         	}
+    	System.out.println("Retiro de dinero - "+"Hora: "+cal.get(Calendar.HOUR_OF_DAY)+":"+cal.get(Calendar.MINUTE)+"\n");
     	
     }
 
